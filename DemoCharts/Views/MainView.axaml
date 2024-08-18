@@ -5,12 +5,21 @@
              xmlns:vm="clr-namespace:DemoCharts.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="DemoCharts.Views.MainView"
+        xmlns:ScottPlot="clr-namespace:ScottPlot.Avalonia;assembly=ScottPlot.Avalonia"
              x:DataType="vm:MainViewModel">
-  <Design.DataContext>
-    <!-- This only sets the DataContext for the previewer in an IDE,
+	<Design.DataContext>
+		<!-- This only sets the DataContext for the previewer in an IDE,
          to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-    <vm:MainViewModel />
-  </Design.DataContext>
-
-  <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+		<vm:MainViewModel />
+	</Design.DataContext>
+	<Grid  ColumnDefinitions="1*,11*" RowDefinitions="1*,1*,2*,1*" ShowGridLines="True">
+		<TextBlock Grid.Column="0" Grid.Row="0">Детализация активности</TextBlock>
+		<ScottPlot:AvaPlot Grid.Column="1" Grid.Row="0" Name="AvaPlot1"/>
+		<TextBlock Grid.Column="0" Grid.Row="1">Отношение в рынке</TextBlock>
+		<ScottPlot:AvaPlot Grid.Column="1" Grid.Row="1" Name="AvaPlot2"/>
+		<TextBlock Grid.Column="0" Grid.Row="2">Профиль клиента за подозрительный день к среднему профилию клиента</TextBlock>
+		<ScottPlot:AvaPlot Grid.Column="1" Grid.Row="2" Name="AvaPlot3"/>
+		<TextBlock Grid.Column="0" Grid.Row="3">Состав активности</TextBlock>
+		<ScottPlot:AvaPlot Grid.Column="1" Grid.Row="3" Name="AvaPlot4"/>
+	</Grid>
 </UserControl>
