@@ -13,13 +13,13 @@
 		<vm:MainViewModel />
 	</Design.DataContext>
 	<Grid  ColumnDefinitions="1*,11*" RowDefinitions="1*,1*,2*,1*" ShowGridLines="True">
-		<TextBlock Grid.Column="0" Grid.Row="0">Детализация активности</TextBlock>
+		<TextBlock VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" TextWrapping="Wrap" >Детализация активности</TextBlock>
 		<ScottPlot:AvaPlot Grid.Column="1" Grid.Row="0" Name="AvaPlot1"/>
-		<TextBlock Grid.Column="0" Grid.Row="1">Отношение в рынке</TextBlock>
+		<TextBlock  VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" TextWrapping="Wrap" >Отношение в рынке</TextBlock>
 		<ScottPlot:AvaPlot Grid.Column="1" Grid.Row="1" Name="AvaPlot2"/>
-		<TextBlock Grid.Column="0" Grid.Row="2">Профиль клиента за подозрительный день к среднему профилию клиента</TextBlock>
+		<TextBlock  VerticalAlignment="Center" Grid.Column="0" Grid.Row="2" TextWrapping="Wrap" >Профиль клиента за подозрительный день к среднему профилию клиента</TextBlock>
 		<ScottPlot:AvaPlot Grid.Column="1" Grid.Row="2" Name="AvaPlot3"/>
-		<TextBlock Grid.Column="0" Grid.Row="3">Состав активности</TextBlock>
+		<TextBlock VerticalAlignment="Center"  Grid.Column="0" Grid.Row="3" TextWrapping="Wrap" >Состав активности</TextBlock>
 		<ScottPlot:AvaPlot Grid.Column="1" Grid.Row="3" Name="AvaPlot4"/>
 	</Grid>
 </UserControl>
