@@ -5,9 +5,8 @@ env:
   OUTPUT_PATH: DemoCharts.Browser/bin/Release/net8.0-browser/publish/wwwroot
 on:
   push:
-    branches: [ "action/deploy" ]
-  pull_request:
-    branches: [ "action/deploy" ]
+    branches:
+      - main
 
 jobs:
   deploy-to-github-pages:
